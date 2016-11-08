@@ -1,0 +1,9 @@
+<h2>Appointments</h2>
+{{#each model as |appointment|}}
+  User ID:{{appointment.user_id}} | Slot ID:{{appointment.slot_id}}
+  <!-- {{#link-to 'list' list}}
+    {{listr-list/card title=list.title}}
+  {{/link-to}} -->
+{{/each}}
+
+{{outlet}}
