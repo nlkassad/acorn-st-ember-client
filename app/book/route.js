@@ -7,7 +7,6 @@ export default Ember.Route.extend({
 
   actions: {
     toggleSlotAvailable (slot) {
-      console.log(parseInt(this.get('credentials.id')));
       slot.toggleProperty('available');
       slot.save();
     },
@@ -19,8 +18,6 @@ export default Ember.Route.extend({
     // },
     //
     createAppointment (newAppointment) {
-      console.log(newAppointment);
-      console.log(this.get('credentials.id'));
       let appointment = this.get('store').createRecord('appointment', newAppointment);
       return appointment.save();
     },
