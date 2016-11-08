@@ -2,10 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNames: ['slots-list'],
-  // newItem: {
-  //   text: null,
-  //   done: false,
-  // },
+
   classNameBindings: ['slotAvailableHidden'],
   slotAvailableHidden: false,
   // form: {
@@ -25,13 +22,10 @@ export default Ember.Component.extend({
     //   return this.sendAction('deleteItem', item);
     // },
     //
-    // createItem () {
-    //   let newItem = this.get('form');
-    //   newItem.list = this.get('list');
-    //   this.sendAction('createItem', newItem);
-    //   // this clears the form input
-    //   this.set('form.text', null);
-    //   // return this.sendAction('createItem', this.get('form'));
+    createAppointment (newAppointment) {
+      return this.sendAction('createAppointment', newAppointment);
+    },
+      // return this.sendAction('createItem', this.get('form'));
     // },
     //
     // edit () {
