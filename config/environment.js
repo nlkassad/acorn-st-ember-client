@@ -30,10 +30,8 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    let port = +('GA'.split('').reduce((p, c) =>
-      p + c.charCodeAt().toString(16), '')
-    );
-    ENV.apiHost = `http://localhost:${port}`;
+    ENV.rootUrl = '/acorn-st-ember-client';
+    ENV.apiHost = 'https://acorn-st-api.herokuapp.com';
   }
 
   if (environment === 'test') {
@@ -51,6 +49,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     ENV.rootUrl = '/acorn-st-ember-client';
+    ENV.apiHost = 'https://acorn-st-api.herokuapp.com';
     ENV.locationType = 'hash';
   }
 
