@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('appointments');
   this.route('appointment');
+  this.route('book');
 });
 
 export default Router;
