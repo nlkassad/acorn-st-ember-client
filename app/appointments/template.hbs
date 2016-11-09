@@ -1,7 +1,13 @@
 <h2>Appointments</h2>
 
 {{#each model as |appointment|}}
+  <li>
     User ID:{{appointment.user_id}} | Slot ID:{{appointment.slot_id}}
+    Editable: {{appointment.editable}}
+    {{#if appointment.editable}}
+      <button>Edit</button>
+    {{/if}}
+  </li>
     <!-- User Email:{{appointment.user.email}} -->
 {{/each}}
 
