@@ -4,7 +4,7 @@ import AjaxService from 'ember-ajax/services/ajax';
 import ENV from 'acorn-st-ember-client/config/environment';
 
 export default AjaxService.extend({
-  host: ENV.apiHost,
+  host: 'https://acorn-st-api.herokuapp.com',
 
   auth: Ember.inject.service(),
   headers: Ember.computed('auth.credentials.token', {

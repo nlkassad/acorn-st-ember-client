@@ -4,7 +4,7 @@ import ActiveModelAdapter from 'active-model-adapter';
 import Ember from 'ember';
 
 export default ActiveModelAdapter.extend({
-  host: ENV.apiHost,
+  host: 'https://acorn-st-api.herokuapp.com',
 
   auth: Ember.inject.service(),
 
