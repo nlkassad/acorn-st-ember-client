@@ -9,24 +9,9 @@
       {{#link-to 'appointment' appointment}}
       View Appointment
       {{/link-to}}
-      <!-- <a href="#" {{action "delete"}}>Delete Appointment</a> -->
       <button {{action 'delete' appointment}}>Delete</button>
       {{outlet}}
     {{/if}}
   </li>
 
-<!-- {{/each}}
-{{#each localSlots as |slots|}}
-  {{slot}}{{slot.id}}
-{{/each}} -->
-<!--
-|{{value}}|
-
-<select onchange={{action "updateValue" value="target.value"}}>
- {{#each rolesIndex.roles as |role|}}
-    <option value="{{role.id}}">{{role.name}}</option>
-  {{/each}}
-</select> -->
-
-<!-- {{slots-list slot='localSlots'}}
-{{outlet}} -->
+{{/each}}
