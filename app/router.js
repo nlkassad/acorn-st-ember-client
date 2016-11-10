@@ -11,7 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('appointments');
-  this.route('appointment');
+  this.route('appointment', { path: '/appointments/:appointment_id' });
   this.route('book');
 });
 
