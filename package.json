@@ -32,6 +32,7 @@
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
     "ember-cli-jshint": "^1.0.0",
+    "ember-cli-moment-shim": "2.2.1",
     "ember-cli-qunit": "^2.1.0",
     "ember-cli-release": "^0.2.9",
     "ember-cli-sass": "^5.3.0",
@@ -43,6 +44,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-local-storage": "1.1.0",
+    "ember-moment": "6.1.0",
     "ember-resolver": "^2.0.3",
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.1",
@@ -52,5 +54,8 @@
     "load-grunt-config": "^0.19.2",
     "loader.js": "^4.0.1",
     "time-grunt": "^1.4.0"
+  },
+  "dependencies": {
+    "moment": "^2.15.2"
   }
 }
