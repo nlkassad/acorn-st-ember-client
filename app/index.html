@@ -9,16 +9,16 @@
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="/acorn-st-ember-client/assets/vendor.css">
-    <link rel="stylesheet" href="/acorn-st-ember-client/assets/acorn-st-ember-client.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/acorn-st-ember-client.css">
 
     {{content-for "head-footer"}}
   </head>
   <body class="container-fluid">
     {{content-for "body"}}
 
-    <script src="/acorn-st-ember-client/assets/vendor.js"></script>
-    <script src="/acorn-st-ember-client/assets/acorn-st-ember-client.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/acorn-st-ember-client.js"></script>
 
     {{content-for "body-footer"}}
   </body>

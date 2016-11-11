@@ -14,15 +14,10 @@ export default Ember.Component.extend({
     },
 
     book () {
-      // return this.sendAction('createAppointment', this.get('slot'));
-      let newAppointment = {};
-      newAppointment.slot_id = this.get('slot.id');
-      console.log("slot id is" + this.get('slot.id'));
+      let newAppointment = { user: this.get('user'), slot: this.get('slot')};
       this.sendAction('createAppointment', newAppointment);
-      // this clears the form input
-      // this.set('form.text', null);
-      // return this.sendAction('createItem', this.get('form'));
     },
+
     // delete () {
     //   return this.sendAction('delete', this.get('item'));
     // },

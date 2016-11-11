@@ -1,4 +1,4 @@
-<p class="slot" {{action 'toggleAvailable'}}>
+<p class="slot">
   Slot ID: {{slot.id}}
   Slot Time: {{slot.time_block}}
   Available: {{slot.available}}
@@ -7,4 +7,7 @@
     Book this slot
     </button>
   {{/if}}
+  <button class="btn btn-xs btn-default slot-book-button" {{action 'toggleAvailable'}}>
+    Available?
+  </button>
 </p>

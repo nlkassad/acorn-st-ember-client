@@ -2,15 +2,14 @@
 
 {{#each model as |appointment|}}
   <li>
-    Appointment ID:{{appointment.user}} |
-    Slot ID:{{appointment.slot}} |
+    User ID:{{appointment.user.id}} |
+    Slot ID:{{appointment.slot.id}} |
     Editable: {{appointment.editable}}
     {{#if appointment.editable}}
       {{#link-to 'appointment' appointment}}
-      View Appointment
+        View Appointment
       {{/link-to}}
       <button {{action 'delete' appointment}}>Delete</button>
-      {{outlet}}
     {{/if}}
   </li>
 {{/each}}

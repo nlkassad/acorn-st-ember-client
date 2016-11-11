@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+
   model() {
-    return this.get('store').findAll('slot');
+    return Ember.RSVP.hash({
+      slots: this.get('store').findAll('slot'),
+      user: this.get('store').findRecord('user', this.get('auth.credentials.id'))
+    });
   },
 
   actions: {
@@ -18,8 +23,12 @@ export default Ember.Route.extend({
     // },
     //
     createAppointment (newAppointment) {
-      let appointment = this.get('store').createRecord('appointment', newAppointment);
-      return appointment.save();
+      newAppointment.slot.toggleProperty('available');
+      newAppointment.slot.save()
+      .then(() => {
+        let appointment = this.get('store').createRecord('appointment', newAppointment);
+        appointment.save();
+      });
     },
     //
     // edit () {

@@ -1,6 +1,7 @@
 <h3>Slots</h3>
-{{#each slot as |slot|}}
+{{#each slots as |slot|}}
   {{slots-list/slot-display slot=slot
+                            user=user
                             toggleSlotAvailable='toggleSlotAvailable'
                             createAppointment='createAppointment'}}
 

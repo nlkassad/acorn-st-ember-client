@@ -11,14 +11,7 @@ export default Ember.Route.extend({
       return this.get('store').peekAll('slot');
     },
     delete (appointment) {
-      console.log(appointment.id);
-      // let aptId = appointment.id;
-      console.log(appointment.user_id);
       appointment.destroyRecord();
-      appointment.save();
-      // return this.sendAction('delete', this.get('appointment'));
-      // return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)
-      // .finally(() => this.get('credentials').reset());
     },
   },
   // actions:{
