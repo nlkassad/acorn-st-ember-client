@@ -1,10 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // localSlots: {},
-  tagName: 'li',
-  classNameBindings: ['appointmentCompleted'],
-  appointmentCompleted: Ember.computed.alias('appointment.done'),
+
   model () {
     return this.get('store').findAll('appointment');
   },
