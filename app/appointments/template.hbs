@@ -1,7 +1,16 @@
 <h2>Appointments</h2>
 
 {{#each model as |appointment|}}
-    User ID:{{appointment.user_id}} | Slot ID:{{appointment.slot_id}}
+  <li>
+    Appointment ID:{{appointment.user_id}} |
+    Slot ID:{{appointment.slot_id}} |
+    Editable: {{appointment.editable}}
+    {{#if appointment.editable}}
+      {{#link-to 'appointment' appointment}}
+      View Appointment
+      {{/link-to}}
+      <button {{action 'delete' appointment}}>Delete</button>
+      {{outlet}}
+    {{/if}}
+  </li>
 {{/each}}
-
-{{outlet}}
