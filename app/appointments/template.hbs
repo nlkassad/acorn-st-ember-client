@@ -2,8 +2,8 @@
 
 {{#each model as |appointment|}}
   <li>
-    Appointment ID:{{appointment.id}} |
-    Slot ID:{{appointment.slot_id}} ||
+    Appointment ID:{{appointment.user_id}} |
+    Slot ID:{{appointment.slot_id}} |
     Editable: {{appointment.editable}}
     {{#if appointment.editable}}
       {{#link-to 'appointment' appointment}}

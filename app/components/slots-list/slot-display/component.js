@@ -17,6 +17,7 @@ export default Ember.Component.extend({
       // return this.sendAction('createAppointment', this.get('slot'));
       let newAppointment = {};
       newAppointment.slot_id = this.get('slot.id');
+      console.log("slot id is" + this.get('slot.id'));
       this.sendAction('createAppointment', newAppointment);
       // this clears the form input
       // this.set('form.text', null);
