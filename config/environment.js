@@ -49,7 +49,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootUrl = '/acorn-st-ember-client';
+    ENV.rootURL = '/acorn-st-ember-client';
     ENV.apiHost = 'https://acorn-st-api.herokuapp.com';
     ENV.locationType = 'hash';
   }
